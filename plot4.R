@@ -1,7 +1,4 @@
-setwd("C:/Users/Nayan/Desktop/Coursera")
-
 ## Getting full dataset 
-
 data_full <- read.table("household_power_consumption.txt", header=T, sep=';', na.strings="?", nrows=2075259, check.names=F, stringsAsFactors=F, comment.char="", quote='\"')
 data_full$Date <- as.Date(data_full$Date, format="%d/%m/%Y")
 
@@ -23,6 +20,7 @@ lines(Sub_metering_3~Datetime,col='Blue')
 legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 plot(Global_reactive_power~Datetime, type="l", ylab="Global Rective Power (kilowatts)",xlab="")
 })
+
 ## Saving to file 
 dev.copy(png, file="plot4.png", height=480, width=480)
 dev.off()
