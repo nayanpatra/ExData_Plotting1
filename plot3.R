@@ -1,7 +1,4 @@
-setwd("C:/Users/Nayan/Desktop/Coursera")
-
 ## Getting full dataset 
-
 data_full <- read.table("household_power_consumption.txt", header=T, sep=';', na.strings="?", nrows=2075259, check.names=F, stringsAsFactors=F, comment.char="", quote='\"')
 data_full$Date <- as.Date(data_full$Date, format="%d/%m/%Y")
 
